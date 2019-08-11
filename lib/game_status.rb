@@ -41,7 +41,7 @@ def over?(board)
     true
   elsif won?(board)
     true
-  end
+  else
     false
   end
 end
