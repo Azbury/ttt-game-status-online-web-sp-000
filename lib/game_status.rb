@@ -14,3 +14,12 @@ WIN_COMBINATIONS = [
   [0,4,8],
   [2,4,6]
 ]
+
+def won?(board)
+  WIN_COMBINATIONS.each |combo| do
+    if (board[combo[0]] === "X" && board[combo[1]] === "X" && board[combo[2]] === "X") || (board[combo[0]] === "O" && board[combo[1]] === "O" && board[combo[2]] === "O")
+      return combo
+    end
+  end
+  false
+end
